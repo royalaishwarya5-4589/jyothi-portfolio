@@ -67,6 +67,7 @@ export default function Footer() {
           <span className="text-label" style={{ color: "var(--lime)" }}>
             THE NEXT CHAPTER
           </span>
+
           <div
             style={{
               flex: 1,
@@ -74,6 +75,7 @@ export default function Footer() {
               background: "rgba(244,241,234,.18)",
             }}
           />
+
           <span
             className="text-label"
             style={{ color: "rgba(244,241,234,.45)" }}
@@ -130,7 +132,9 @@ export default function Footer() {
           </p>
 
           <motion.a
-            href="mailto:royalaishwarya5@gmail.com"
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=royalaishwarya5@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
             whileHover={reduceMotion ? undefined : { x: 5 }}
             whileTap={reduceMotion ? undefined : { scale: 0.98 }}
             style={{
@@ -159,7 +163,8 @@ export default function Footer() {
         <div
           style={{
             display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 230px), 1fr))",
+            gridTemplateColumns:
+              "repeat(auto-fit, minmax(min(100%, 230px), 1fr))",
             gap: "2.5rem",
             alignItems: "end",
             marginTop: "clamp(5rem, 11vw, 9rem)",
@@ -178,6 +183,7 @@ export default function Footer() {
             >
               JA<span style={{ color: "var(--lime)" }}>.</span>
             </p>
+
             <p
               className="text-label"
               style={{
@@ -187,6 +193,7 @@ export default function Footer() {
             >
               JYOTHI AISWARYA
             </p>
+
             <p
               style={{
                 color: "rgba(244,241,234,.42)",
@@ -256,7 +263,7 @@ export default function Footer() {
             <p style={{ margin: 0 }}>DESIGNED WITH INTENTION.</p>
             <p style={{ margin: 0 }}>BUILT TO KEEP LEARNING.</p>
             <p style={{ marginTop: "0.75rem" }}>
-              © {new Date().getFullYear()} Jyothi Aiswarya
+              © 2026 Jyothi Aiswarya
             </p>
           </div>
         </div>

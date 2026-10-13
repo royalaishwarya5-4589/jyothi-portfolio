@@ -13,16 +13,16 @@ const timeline = [
   {
     id: "edu",
     chapter: "EDUCATION",
-    marker: "2022",
+    marker: "2024",
     title: "B.Tech Computer Science & Engineering",
-    body: "Studying at Sanskrithi School of Engineering, Puttaparthi, building a foundation in computer science and software development.",
+    body: "Started my B.Tech in Computer Science & Engineering at Sanskrithi School of Engineering, Puttaparthi, building a strong foundation in computer science and software development.",
     note: "ONGOING",
     accent: false,
   },
   {
     id: "learning",
     chapter: "FOUNDATIONS",
-    marker: "2023",
+    marker: "2024",
     title: "Learning to build",
     body: "Exploring programming and web technologies, turning concepts into practical experiments and small projects.",
     note: null,
@@ -31,29 +31,29 @@ const timeline = [
   {
     id: "building",
     chapter: "EXPLORATION",
-    marker: "2024",
+    marker: "2024–2025",
     title: "From concepts to projects",
     body: "Moving beyond tutorials to explore how software ideas can become useful, working products.",
     note: null,
     accent: false,
   },
   {
-    id: "firstmove",
-    chapter: "FEATURED PROJECT",
-    marker: "2025",
-    title: "First Move (11~18)",
-    body: "Developing an educational technology platform built around the idea of making technical learning more accessible.",
-    note: "PROJECT",
-    accent: true,
-  },
-  {
     id: "leadership",
     chapter: "LEADERSHIP",
-    marker: "2025",
+    marker: "2025–26",
     title: "VP Education — Toastmasters",
     body: "Serving as VP Education at Sanskrithi Toastmasters Club, strengthening communication, organization, and peer learning.",
     note: "LEADERSHIP",
     accent: false,
+  },
+  {
+    id: "firstmove",
+    chapter: "FEATURED PROJECT",
+    marker: "2026",
+    title: "First Move (11~18)",
+    body: "Building an educational technology platform designed to make technical learning more accessible through practical, hands-on learning.",
+    note: "PROJECT",
+    accent: true,
   },
   {
     id: "next",
@@ -93,12 +93,15 @@ export default function Journey() {
 
       <div
         className="container-grid"
-        style={{ paddingBlock: "clamp(4rem, 8vw, 7rem)" }}
+        style={{
+          paddingBlock: "clamp(4rem, 8vw, 7rem)",
+        }}
       >
-        <div
-          className="mb-12 flex items-center gap-4 md:mb-16"
-        >
-          <span className="text-label" style={{ color: "var(--ink-60)" }}>
+        <div className="mb-12 flex items-center gap-4 md:mb-16">
+          <span
+            className="text-label"
+            style={{ color: "var(--ink-60)" }}
+          >
             CHAPTER 06 — JOURNEY
           </span>
 
@@ -106,7 +109,10 @@ export default function Journey() {
 
           <span
             className="text-label"
-            style={{ color: "var(--ink-60)", opacity: 0.4 }}
+            style={{
+              color: "var(--ink-60)",
+              opacity: 0.4,
+            }}
           >
             §006
           </span>
@@ -114,10 +120,14 @@ export default function Journey() {
 
         <motion.h2
           id="journey-heading"
-          initial={reduceMotion ? false : { opacity: 0, y: 20 }}
+          initial={
+            reduceMotion ? false : { opacity: 0, y: 20 }
+          }
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-10%" }}
-          transition={{ duration: reduceMotion ? 0 : 0.75 }}
+          transition={{
+            duration: reduceMotion ? 0 : 0.75,
+          }}
           className="font-display font-bold"
           style={{
             fontSize: "clamp(2.8rem, 6vw, 6.5rem)",
@@ -129,12 +139,18 @@ export default function Journey() {
         >
           A work
           <br />
-          <em style={{ fontStyle: "italic", color: "var(--violet)" }}>
+          <em
+            style={{
+              fontStyle: "italic",
+              color: "var(--violet)",
+            }}
+          >
             in progress.
           </em>
         </motion.h2>
 
         <div style={{ position: "relative" }}>
+          {/* Timeline background line */}
           <div
             aria-hidden="true"
             className="hidden md:block"
@@ -148,6 +164,7 @@ export default function Journey() {
             }}
           />
 
+          {/* Animated timeline progress */}
           <motion.div
             aria-hidden="true"
             className="hidden md:block"
@@ -168,10 +185,15 @@ export default function Journey() {
               <motion.article
                 key={entry.id}
                 initial={
-                  reduceMotion ? false : { opacity: 0, y: 16 }
+                  reduceMotion
+                    ? false
+                    : { opacity: 0, y: 16 }
                 }
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-5%" }}
+                viewport={{
+                  once: true,
+                  margin: "-5%",
+                }}
                 transition={{
                   duration: reduceMotion ? 0 : 0.65,
                   delay: reduceMotion ? 0 : i * 0.06,
@@ -179,18 +201,22 @@ export default function Journey() {
                 }}
                 style={{
                   display: "grid",
-                  gridTemplateColumns: "clamp(3.5rem, 10vw, 7rem) minmax(0, 1fr)",
+                  gridTemplateColumns:
+                    "clamp(3.5rem, 10vw, 7rem) minmax(0, 1fr)",
                   gap: "clamp(1rem, 4vw, 4rem)",
                   paddingBlock: "clamp(1.5rem, 3vw, 2.5rem)",
                   borderBottom: "1px solid var(--ink-10)",
                   opacity: entry.future ? 0.75 : 1,
                 }}
               >
+                {/* Year */}
                 <div style={{ paddingTop: "0.2rem" }}>
                   <span
                     className="text-label"
                     style={{
-                      color: entry.accent ? "var(--violet)" : "var(--ink-60)",
+                      color: entry.accent
+                        ? "var(--violet)"
+                        : "var(--ink-60)",
                       fontWeight: entry.accent ? 700 : 400,
                     }}
                   >
@@ -198,11 +224,14 @@ export default function Journey() {
                   </span>
                 </div>
 
+                {/* Timeline content */}
                 <div style={{ minWidth: 0 }}>
                   <p
                     className="text-label"
                     style={{
-                      color: entry.accent ? "var(--violet)" : "var(--ink-60)",
+                      color: entry.accent
+                        ? "var(--violet)"
+                        : "var(--ink-60)",
                       opacity: entry.accent ? 1 : 0.65,
                       marginBottom: "0.65rem",
                     }}
@@ -215,9 +244,13 @@ export default function Journey() {
                           display: "inline-block",
                           marginLeft: "0.75rem",
                           marginTop: "0.25rem",
-                          color: entry.accent ? "var(--violet)" : "var(--ink-60)",
+                          color: entry.accent
+                            ? "var(--violet)"
+                            : "var(--ink-60)",
                           border: `1px solid ${
-                            entry.accent ? "var(--violet)" : "var(--ink-10)"
+                            entry.accent
+                              ? "var(--violet)"
+                              : "var(--ink-10)"
                           }`,
                           padding: "0.2rem 0.45rem",
                           borderRadius: "2px",
@@ -254,6 +287,7 @@ export default function Journey() {
                     {entry.body}
                   </p>
 
+                  {/* First Move project link */}
                   {entry.id === "firstmove" && (
                     <a
                       href="https://first-move-11-18.vercel.app"
@@ -262,7 +296,8 @@ export default function Journey() {
                       className="mt-4 inline-flex items-center gap-2 text-label transition-opacity hover:opacity-60"
                       style={{ color: "var(--violet)" }}
                     >
-                      VIEW PROJECT <span aria-hidden="true">↗</span>
+                      VIEW PROJECT{" "}
+                      <span aria-hidden="true">↗</span>
                     </a>
                   )}
                 </div>
